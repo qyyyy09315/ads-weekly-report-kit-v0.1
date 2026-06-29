@@ -60,7 +60,7 @@ _HTML_TEMPLATE = Template(
     .katex .mord, .katex .mbin, .katex .mrel, .katex .mopen, .katex .mclose, .katex .mpunct, .katex .minner, .katex .mord.text { color:var(--text); }
     .katex .mfrac .frac-line { border-bottom-color:rgba(255,255,255,.2); }
     .katex .text { color:var(--muted); }
-    .katex-html { overflow-x:auto; }
+    .kpi-def .formula { overflow-x:auto; }
     @media (max-width: 700px) { .kpi-defs { grid-template-columns:1fr; } }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
@@ -159,20 +159,20 @@ _HTML_TEMPLATE = Template(
       <div class="panel">
         <div class="kpi-defs">
           <div class="kpi-def">
-            <div class="formula">$$\mathrm{CTR} = \frac{\mathrm{link\_clicks}}{\mathrm{impressions}}$$</div>
-            <div class="note">Link click-through rate. If $\mathrm{impressions}=0$, returns $0$.</div>
+            <div class="formula">$$\\mathrm{CTR} = \\frac{\\mathrm{link\\_clicks}}{\\mathrm{impressions}}$$</div>
+            <div class="note">Link click-through rate. If $\\mathrm{impressions}=0$, returns $0$.</div>
           </div>
           <div class="kpi-def">
-            <div class="formula">$$\mathrm{CPC} = \frac{\mathrm{spend}}{\mathrm{link\_clicks}}$$</div>
-            <div class="note">Cost per link click. If $\mathrm{link\_clicks}=0$, returns N/A.</div>
+            <div class="formula">$$\\mathrm{CPC} = \\frac{\\mathrm{spend}}{\\mathrm{link\\_clicks}}$$</div>
+            <div class="note">Cost per link click. If $\\mathrm{link\\_clicks}=0$, returns N/A.</div>
           </div>
           <div class="kpi-def">
-            <div class="formula">$$\mathrm{CPM} = \frac{\mathrm{spend}}{\mathrm{impressions}} \times 1000$$</div>
-            <div class="note">Cost per 1,000 impressions. If $\mathrm{impressions}=0$, returns N/A.</div>
+            <div class="formula">$$\\mathrm{CPM} = \\frac{\\mathrm{spend}}{\\mathrm{impressions}} \\times 1000$$</div>
+            <div class="note">Cost per 1,000 impressions. If $\\mathrm{impressions}=0$, returns N/A.</div>
           </div>
           <div class="kpi-def">
-            <div class="formula">$$\mathrm{ROAS} = \begin{cases} \text{Meta weighted}, & \mathrm{website\_purchase\_roas} \text{ available} \\[8pt] \dfrac{\mathrm{purchase\_value}}{\mathrm{spend}}, & \text{otherwise (derived)} \end{cases}$$</div>
-            <div class="note">Prioritizes Meta's own ROAS metric from export; falls back to derived $\mathrm{purchase\_value}/\mathrm{spend}$.</div>
+            <div class="formula">$$\\mathrm{ROAS} = \\begin{cases} \\text{Meta weighted}, & \\mathrm{website\\_purchase\\_roas} \\text{ available} \\\\[8pt] \\dfrac{\\mathrm{purchase\\_value}}{\\mathrm{spend}}, & \\text{otherwise (derived)} \\end{cases}$$</div>
+            <div class="note">Prioritizes Meta's own ROAS metric from export; falls back to derived $\\mathrm{purchase\\_value}/\\mathrm{spend}$.</div>
           </div>
         </div>
         {% if ctx.notes %}
