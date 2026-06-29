@@ -50,21 +50,11 @@
   <rect x="56" y="396" width="688" height="120" rx="10" fill="rgba(255,255,255,0.025)"/>
   <text x="80" y="422" fill="#e2e8f0" font-size="16">ROAS</text>
   <text x="155" y="422" fill="#e2e8f0" font-size="16">=</text>
-
-  <!-- Left brace -->
-  <text x="175" y="432" fill="#e2e8f0" font-size="28">⎧</text>
-  <text x="175" y="492" fill="#e2e8f0" font-size="28">⎩</text>
-
-  <!-- Case 1 -->
-  <text x="200" y="432" fill="#e2e8f0" font-size="14" font-family="KaTeX_Main, Times, serif">website_purchase_roas</text>
-  <text x="428" y="432" fill="#94a3b8" font-size="13">(Meta weighted)</text>
-  <text x="200" y="450" fill="#94a3b8" font-size="12">if website_purchase_roas column available in export</text>
-
-  <!-- Case 2 -->
-  <text x="200" y="480" fill="#e2e8f0" font-size="14" font-family="KaTeX_Main, Times, serif">purchase_value</text>
-  <line x1="195" y1="470" x2="358" y2="470" stroke="#e2e8f0" stroke-opacity="0.45" stroke-width="1"/>
-  <text x="210" y="485" fill="#e2e8f0" font-size="14" font-family="KaTeX_Main, Times, serif">spend</text>
-  <text x="375" y="485" fill="#94a3b8" font-size="13">(derived, otherwise)</text>
-
-  <text x="535" y="502" fill="#94a3b8" font-size="13">Prioritizes Meta's ROAS metric; falls back to purchase_value / spend.</text>
+  <text x="185" y="422" fill="#e2e8f0" font-size="15" font-family="KaTeX_Main, Times, serif">website_purchase_roas</text>
+  <text x="400" y="422" fill="#94a3b8" font-size="13">(preferred, Meta weighted)</text>
+  <line x1="185" y1="448" x2="415" y2="448" stroke="#e2e8f0" stroke-opacity="0.45" stroke-width="1"/>
+  <text x="185" y="465" fill="#e2e8f0" font-size="15" font-family="KaTeX_Main, Times, serif">purchase_value</text>
+  <text x="325" y="465" fill="#e2e8f0" font-size="15">/</text>
+  <text x="338" y="465" fill="#e2e8f0" font-size="15" font-family="KaTeX_Main, Times, serif">spend</text>
+  <text x="400" y="465" fill="#94a3b8" font-size="13">(fallback, derived)</text>
 </svg>

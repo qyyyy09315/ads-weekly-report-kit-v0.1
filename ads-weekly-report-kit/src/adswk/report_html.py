@@ -171,8 +171,8 @@ _HTML_TEMPLATE = Template(
             <div class="note">Cost per 1,000 impressions. If $\\mathrm{impressions}=0$, returns N/A.</div>
           </div>
           <div class="kpi-def">
-            <div class="formula">$$\\mathrm{ROAS} = \\begin{cases} \\text{Meta weighted}, & \\mathrm{website\\_purchase\\_roas} \\text{ available} \\\\[8pt] \\dfrac{\\mathrm{purchase\\_value}}{\\mathrm{spend}}, & \\text{otherwise (derived)} \\end{cases}$$</div>
-            <div class="note">Prioritizes Meta's own ROAS metric from export; falls back to derived $\\mathrm{purchase\\_value}/\\mathrm{spend}$.</div>
+            <div class="formula">$$\\mathrm{ROAS} = \\begin{aligned} &\\mathrm{website\\_purchase\\_roas} && \\text{(preferred, Meta weighted)} \\\\[6pt] &\\dfrac{\\mathrm{purchase\\_value}}{\\mathrm{spend}} && \\text{(fallback, derived)} \\end{aligned}$$</div>
+            <div class="note">Prioritizes Meta's own ROAS metric; falls back to derived $\\mathrm{purchase\\_value}/\\mathrm{spend}$.</div>
           </div>
         </div>
         {% if ctx.notes %}
